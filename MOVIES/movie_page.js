@@ -1,5 +1,6 @@
 const title = document.querySelector("title");
 const container = document.querySelector("#movie-container");
+const movieTitle = document.querySelector("#movie-title");
 
 const movieId = "969681";
 //calling
@@ -14,8 +15,11 @@ async function loadMovie() {
   image.classList.add("movie-poster");
 
   title.textContent = movie.data.title;
+   container.append(image);
+  movieTitle.textContent = movie.data.title;
 
-  container.append(image);
+
+ 
 }
 
 async function getMovie(movieId) {
