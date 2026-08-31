@@ -7,19 +7,14 @@ const movieId = "969681";
 
 async function loadMovie() {
   const movie = await getMovie(movieId);
-  console.log(movie);//yes
+  console.log(movie); //yes
 
-  const image = document.createElement("img");
+  const image = document.getElementById("movie-poster");
   image.src = `https://image.tmdb.org/t/p/w500/${movie.data.poster_path}`;
   image.alt = "movie poster";
-  image.classList.add("movie-poster");
 
   title.textContent = movie.data.title;
-   container.append(image);
   movieTitle.textContent = movie.data.title;
-
-
- 
 }
 
 async function getMovie(movieId) {
