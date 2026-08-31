@@ -13,7 +13,7 @@ async function loadMovie() {
   image.alt = "movie poster";
   image.classList.add("movie-poster");
 
-  title.textContent = "hello";
+  title.textContent = movie.data.title;
 
   container.append(image);
 }
