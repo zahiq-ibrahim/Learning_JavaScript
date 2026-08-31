@@ -6,7 +6,7 @@ const movieId = "969681";
 
 async function loadMovie() {
   const movie = await getMovie(movieId);
-  console.log(movie);
+  console.log(movie);//yes
 
   const image = document.createElement("img");
   image.src = `https://image.tmdb.org/t/p/w500/${movie.data.poster_path}`;
