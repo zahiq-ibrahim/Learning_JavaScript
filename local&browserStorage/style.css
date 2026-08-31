@@ -1,0 +1,39 @@
+#store-btn{
+    background-color: rgb(245, 139, 139);
+    height: 70px;
+    width: 150px;
+    margin: 100px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    color: rgb(45, 48, 50);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    
+}
+#store-btn:hover{
+    background-color: rgb(255, 28, 28);
+    transform: scale(1.05);
+    box-shadow: 15px 15px 20px rgb(252, 91, 91);
+    
+}
+
+
+
+#retrieve-btn{
+    background-color: rgb(152, 247, 143);
+    height: 70px;
+    width: 150px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    color: rgb(45, 48, 50);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    
+}
+
+#retrieve-btn:hover{
+    background-color: rgb(63, 255, 46);
+    transform: scale(1.05);
+    box-shadow: 15px 15px 20px rgb(136, 255, 140);
+    
+}

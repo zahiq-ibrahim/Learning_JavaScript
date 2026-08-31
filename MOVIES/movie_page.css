@@ -1,0 +1,4 @@
+.movie-poster{
+    height: clamp(300px, 40vw, 500px);
+    width: auto;
+}
