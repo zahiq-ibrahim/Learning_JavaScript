@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="container">
+      <h1>Track you tasks!</h1>
+
+      <div class="input-container">
+        <input type="text" id="task-info" placeholder="Enter Text" />
+        <button id="add-task-button">Add Task</button>
+      </div>
+
+      <div class="boards">
+        <section class="board">
+          <h2>To do</h2>
+          <div id="to-do-list" class="task-list"></div>
+        </section>
+
+        <section class="board">
+          <h2>Done</h2>
+
+          <div id="done-list" class="task-list">
+            <!-- completed tasks go here -->
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

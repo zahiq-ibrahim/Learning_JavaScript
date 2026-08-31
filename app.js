@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const ul = document.body.firstElementChild.nextElementSibling;
 const firstLi = Uint16Array.firstElementChild;
 
