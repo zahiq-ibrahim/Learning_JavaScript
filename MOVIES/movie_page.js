@@ -12,6 +12,8 @@ const movieStatus = document.getElementById("status");
 const genres = document.querySelector(".genre-bubble-row");
 const playBtn = document.getElementById("play-now-btn");
 const cardsDiv = document.querySelector(".production-com");
+const trailer = document.getElementById("trailer");
+const backdrop = document.getElementById("backdrop");
 
 const movieId = "969681";
 //calling
@@ -44,31 +46,43 @@ async function loadMovie() {
 
     genres.append(newGenreDiv);
   });
-  playBtn.addEventListener('click', () =>{
-
+  playBtn.addEventListener("click", () => {
     window.open(movie.data.stream_url, "_blank");
-    
   });
 
-  movie.data.production_companies.forEach((company)=>{
+  movie.data.production_companies.forEach((company) => {
     const newCard = document.createElement("div");
     newCard.classList.add("prod-info-card");
-    
-    const image = document.createElement("img");
-    image.src = `https://image.tmdb.org/t/p/w500/${company.logo_path}`;
-    image.alt = "img";
-    const spanName = document.createElement('span');
-    spanName.textContent = company.name;
-    const spanCu = document.createElement('span');
-    spanCu.textContent =company.origin_country;
 
-    newCard.append(image);
+    if (company.logo_path) {
+      const image = document.createElement("img");
+      image.src = `https://image.tmdb.org/t/p/w500/${company.logo_path}`;
+      image.alt = "Company Logo";
+        newCard.append(image);
+    }
+
+    const spanName = document.createElement("span");
+    spanName.textContent = company.name;
+    const spanCu = document.createElement("span");
+    spanCu.textContent = company.origin_country;
+
+  
     newCard.append(spanName);
     newCard.append(spanCu);
     cardsDiv.append(newCard);
-
   });
-  
+
+  // src="https://www.youtube.com/embed/P3uI5sLosKU"
+  // width="560"
+  // height="315"
+  // allowfullscreen
+
+  trailer.src = "https://www.youtube.com/embed/" + movie.data.trailer_id;
+  trailer.width = "560";
+  trailer.height = "315";
+  trailer.allowfullscreen = true;
+
+  backdrop.src = "https://image.tmdb.org/t/p/w500" + movie.data.backdrop_path;
 }
 
 async function getMovie(movieId) {
