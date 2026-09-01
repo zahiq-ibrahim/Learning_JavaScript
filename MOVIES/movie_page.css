@@ -197,7 +197,7 @@ body {
 }
 
 .prod-info-card {
-  background-color: #ffffff;
+  background-color: #efebe3;
   height: clamp(50px, 40vw, 100px);
   width: clamp(100px, 40vw, 150px);
   border-radius: 6px;
@@ -259,5 +259,5 @@ body {
   background-color: #1a1e21;
   margin-left: 150px;
   margin-right: 150px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
