@@ -9,12 +9,54 @@
   </head>
   <body>
     <div id="movie-container">
-        
       <img id="movie-poster" class="movie-poster" alt="movie poster" />
 
       <div class="movie-info">
-        <h1 id="movie-title"></h1>
+        <div class="title-row">
+          <h1 id="movie-title"></h1>
+
+          <div class="rating">
+            <span id="rating-value"></span>
+            <span id="star">★</span>
+          </div>
+        </div>
+        <span id="release-date">Release Date: </span>
+
+        <div class="info-bubble-row">
+          <div class="info-bubble">
+            <span id="duration"></span>
+          </div>
+
+          <div class="info-bubble">
+            <span id="original-language"></span>
+          </div>
+
+          <div class="info-bubble">
+            <span id="origin-country"></span>
+          </div>
+
+          <div class="info-bubble">
+            <span id="status"></span>
+          </div>
+        </div>
+            <h2 id="tagline"></h2>
+    <h3 id="description"></h3>
+
+        <button id="play-now-btn">Play Now</button>
       </div>
     </div>
+
+    <iframe
+      src="https://www.youtube.com/embed/P3uI5sLosKU"
+      width="560"
+      height="315"
+      allowfullscreen
+    >
+    </iframe>
+
+    <div class="genre-bubble-row"></div>
+
+    <h2 id="tagline">Production Companies</h2>
+    <div class="production-com"></div>
   </body>
 </html>
