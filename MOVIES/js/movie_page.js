@@ -18,11 +18,10 @@ const revenue = document.getElementById("revenue");
 const popularity = document.getElementById("popularity");
 const voteCount = document.getElementById("vote-count");
 
-<<<<<<< HEAD:MOVIES/movie_page.js
-const movieId = "986056";
-=======
+
+
 const movieId = "1368337";
->>>>>>> 402c39864e3cf6bd782e741225853b77bdafcc99:MOVIES/js/movie_page.js
+
 //calling
 
 async function loadMovie() {
