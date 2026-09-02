@@ -1,5 +1,4 @@
 const title = document.querySelector("title");
-//const container = document.querySelector("#movie-container");
 const movieTitle = document.querySelector("#movie-title");
 const tagline = document.getElementById("tagline");
 const description = document.getElementById("description");
@@ -14,8 +13,12 @@ const playBtn = document.getElementById("play-now-btn");
 const cardsDiv = document.querySelector(".production-com");
 const trailer = document.getElementById("trailer");
 const backdrop = document.getElementById("backdrop");
+const budget = document.getElementById("budget");
+const revenue = document.getElementById("revenue");
+const popularity = document.getElementById("popularity");
+const voteCount = document.getElementById("vote-count");
 
-const movieId = "969681";
+const movieId = "1368337";
 //calling
 
 async function loadMovie() {
@@ -58,7 +61,7 @@ async function loadMovie() {
       const image = document.createElement("img");
       image.src = `https://image.tmdb.org/t/p/w500/${company.logo_path}`;
       image.alt = "Company Logo";
-        newCard.append(image);
+      newCard.append(image);
     }
 
     const spanName = document.createElement("span");
@@ -66,7 +69,6 @@ async function loadMovie() {
     const spanCu = document.createElement("span");
     spanCu.textContent = company.origin_country;
 
-  
     newCard.append(spanName);
     newCard.append(spanCu);
     cardsDiv.append(newCard);
@@ -78,11 +80,16 @@ async function loadMovie() {
   // allowfullscreen
 
   trailer.src = "https://www.youtube.com/embed/" + movie.data.trailer_id;
-  trailer.width = "560";
-  trailer.height = "315";
+  trailer.width = "460";
+  trailer.height = "250";
   trailer.allowfullscreen = true;
 
   backdrop.src = "https://image.tmdb.org/t/p/w500" + movie.data.backdrop_path;
+
+  budget.textContent += movie.data.budget;
+  revenue.textContent += movie.data.revenue;
+  popularity.textContent = movie.data.popularity;
+  voteCount.textContent = movie.data.vote_count;
 }
 
 async function getMovie(movieId) {
